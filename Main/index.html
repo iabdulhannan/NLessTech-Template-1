@@ -2,169 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>NLESSTECH - Home</title>
     <link href="../Assets/Stylesheets/Tailwind.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link href="Assets/indexStyles.css" rel="stylesheet">
+    <link href="Assets/Stylesheets/indexStyles.css" rel="stylesheet">
+    <link href="../Assets/Frameworks/fontawesome-free-5.15.4-web/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Assets/Scripts/Master.js"></script>
     <script>
 
 
-        $(document).scroll(function () {
-            var y = $(this).scrollTop();
-            let height = screen.height;
-            console.log(height)
-            if (y > screen.height / 2) {
-                $('.fuck').fadeIn();
-            } else {
-                $('.fuck').fadeOut();
-            }
-
-
-        });
-
-        $(document).ready(function () {
-            // $('div[name="product"]').hover(function () {
-            //         // $(this).find('div[name="data"]').animate({height: "270px"})
-            //         $(this).find('div[name="dataShort"]').animate({height: "0"})
-            //     },
-            //     function () {
-            //         // $(this).find('div[name="data"]').animate({height:"auto"})
-            //         $(this).find('div[name="dataShort"]').css("height", "")
-            //     }
-            // )
-
-        })
     </script>
 
+    <style>
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
-<section id="first">
-</section>
-
-<section>
-    <div class="text-white text-center py-5 font-mono">
-    <h1 class="font-bold text-4xl">Our Products</h1>
+<nav id="fixed-header" class="grid grid-cols-12 justify-center items-center py-2 fixed w-full z-10">
+    <div class="col-span-3 flex items-center flex-shrink-0 text-white mr-6">
+        <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+            <span class="text-2xl pl-2 text-black" style="font-family: Poppins-SemiBold">LOGO</span>
+            <span id="navSiteName" class="text-2xl pl-2 text-black" style="display: none">NLESSTECH</span>
+        </a>
     </div>
-    <div class="grid grid-cols-12 place-items-center px-36">
-        <div name="product" class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl"
-             style=" height: 270px">
-            <div class="absolute mb-48" style="z-index: -10">
-                <img src="Assets/Icons/githubIcon.svg" width="50px">
-            </div>
-            <div name="dataShort" class=" w-full rounded-2xl h-2/3"
-                 style="background-color: rgba(9, 145, 255, 0.84)">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been </p>
+    <div class="sm:flex justify-end flex-1 col-span-6 sm:flex flex items-center justify-center w-full sm:items-center sm:w-auto hidden"
+         id="nav-content">
+        <ul>
+            <li class="active"><a href="#presenter">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+        </ul>
+
+    </div>
+
+    <div id="navReqDemoBtn" class="hidden col-span-3 col-start-11">
+
+        <a href="contactForm.html">
+            <button type="button"
+                    class="py-2 px-3 rounded bg-transparent text-base text-black border border-gray-500
+                        tracking-wide relative transform transition ease-out duration-500 hover:scale-95">
+                Request Demo
+            </button>
+        </a>
+    </div>
+</nav>
+
+<section id="presenter" class="min-h-0 lg:min-h-full min-h-0 sm:py-40 flex justify-center items-center">
+    <div class="container">
+        <div class="sm:block md:flex items-center px-20">
+            <div class="w-full lg:w-1/2">
+                <div class="mb-0 lg:mb-6">
+                    <h1 class="typing-demo text-gray-900 mb-9 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+                        NLESSTECH</h1>
+                    <p class="text-gray-600 text-lg mb-10 xl:pr-18 2xl:pr-120">
+                        Automate your business communications <br>and improve the customer experience</p>
                 </div>
             </div>
-            <div name="dataLong" class=" w-full rounded-2xl h-full"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div class="link5 my-2 font-semibold">
-                        <a href="#" class="">Learn More</a>
-                    </div>
+            <div class="w-full lg:w-1/2 md:block sm:hidden">
+                <div class="pt-8 lg:pt-0">
+                    <img src="" alt="" class="w-full lg:w-auto">
                 </div>
             </div>
-
-
-        </div>
-        <div name="product" class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl"
-             style=" height: 270px">
-            <div class="absolute mb-48" style="z-index: -10">
-                <img src="Assets/Icons/githubIcon.svg" width="50px">
-            </div>
-            <div name="dataShort" class=" w-full rounded-2xl h-2/3"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been </p>
-                </div>
-            </div>
-            <div name="dataLong" class=" w-full rounded-2xl h-full"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div class="link5 my-2 font-semibold">
-                        <a href="#" class="">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <div name="product" class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl"
-             style=" height: 270px">
-            <div class="absolute mb-48" style="z-index: -10">
-                <img src="Assets/Icons/githubIcon.svg" width="50px">
-            </div>
-            <div name="dataShort" class=" w-full rounded-2xl h-2/3"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been </p>
-                </div>
-            </div>
-            <div name="dataLong" class=" w-full rounded-2xl h-full"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div class="link5 my-2 font-semibold">
-                        <a href="#" class="">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <div name="product" class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl"
-             style="height: 270px">
-            <div class="absolute mb-48">
-                <img src="Assets/Icons/githubIcon.svg" width="50px">
-            </div>
-            <div name="dataShort" class="w-full rounded-2xl h-2/3"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been </p>
-                </div>
-            </div>
-            <div name="dataLong" class=" w-full rounded-2xl h-full"
-                 style="background-color: rgba(130, 142, 234, 0.8);">
-                <div class="flex flex-col p-5 text-white">
-                    <h1 class="text-xl">PlanetPress Connect</h1>
-                    <hr class="w-1/3 my-2">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div class="link5 my-2 font-semibold">
-                        <a href="#" class="">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
     </div>
 </section>
 
+<!--Services-->
+<section id="services" class="bg-white lg:min-h-full">
+    <div class="container mx-auto pt-24 md:pt-16 px-6 xl:max-w-7xl mx-auto p-4 lg:p-8">
+        <div class="py-12 text-center" style="font-family: Poppins-SemiBold">
+            <h2 class="text-3xl md:text-4xl font-black mb-5">
+                Our Services
+            </h2>
+        </div>
+
+        <div class="grid overflow-hidden grid-cols-5 grid-rows-2 gap-5 w-auto h-auto">
+            <div class=" text-gray-600 min-w-full 	min-h-full rounded row-start-1 col-start-1 col-end-3 text-center py-5">
+                <div class="group inline-flex items-center justify-center w-12 h-12 ml-3 mb-8 relative">
+                    <div class="absolute inset-0 rounded-xl -m-3 transform -rotate-6 bg-indigo-300 transition ease-out duration-150 group-hover:rotate-6 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 rounded-xl -m-3 transform rotate-2 bg-blue-500 bg-opacity-75 shadow-inner transition ease-out duration-150 group-hover:-rotate-3 group-hover:scale-110"></div>
+                    <svg class="hi-outline hi-code inline-block w-10 h-10 text-white relative transform transition ease-out duration-150 group-hover:scale-125"
+                         stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">
+                    Software Integration
+                </h3>
+                <p class="leading-relaxed text-gray-600 text-justify">
+                    Each component is an HTML code snippet which you can easily copy-paste into your code and customize
+                    it to match your needs. They will work in any JS or other framework you are using.
+                </p>
+            </div>
+            <div class=" text-gray-600 min-w-full 	min-h-full rounded row-start-1 col-start-5 col-end-3 text-center py-5">
+                <div class="group inline-flex items-center justify-center w-12 h-12 ml-3 mb-8 relative">
+                    <div class="absolute inset-0 rounded-xl -m-3 transform -rotate-6 bg-indigo-300 transition ease-out duration-150 group-hover:rotate-6 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 rounded-xl -m-3 transform rotate-2 bg-blue-500 bg-opacity-75 shadow-inner transition ease-out duration-150 group-hover:-rotate-3 group-hover:scale-110"></div>
+                    <svg class="hi-outline hi-device-mobile inline-block w-10 h-10 text-white relative transform transition ease-out duration-150 group-hover:scale-125"
+                         stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">
+                    Complete and tailored Training programs
+                </h3>
+                <p class="leading-relaxed text-gray-600 text-justify">
+                    Your learning needs are unique – and need to be adapted according to your local market, your
+                    strategic goals, and your organisation’s challenges. At SWIFT, we understand that, and have
+                    developed a full range of adaptable training programmes.
+                </p>
+            </div>
+            <div class="text-gray-600 min-w-full 	min-h-full rounded row-start-1 col-start-12 col-end-5 text-center py-5">
+                <div class="group inline-flex items-center justify-center w-12 h-12 ml-3 mb-8 relative">
+                    <div class="absolute inset-0 rounded-xl -m-3 transform -rotate-6 bg-indigo-300 transition ease-out duration-150 group-hover:rotate-6 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 rounded-xl -m-3 transform rotate-2 bg-blue-500 bg-opacity-75 shadow-inner transition ease-out duration-150 group-hover:-rotate-3 group-hover:scale-110"></div>
+                    <svg class="hi-outline hi-device-mobile inline-block w-10 h-10 text-white relative transform transition ease-out duration-150 group-hover:scale-125"
+                         stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">
+                    Document Design
+                </h3>
+                <p class="leading-relaxed text-gray-600 text-justify">
+                    Document design is the process of choosing how to present all the basic document elements so your
+                    document's message is clear and effective.
+                </p>
+
+            </div>
+            <!--            Support-->
+            <div class=" text-gray-600 min-w-full 	min-h-full rounded row-start-2 col-start-2 col-end-4 text-center py-5">
+                <div class="group inline-flex items-center justify-center w-12 h-12 ml-3 mb-8 relative">
+                    <div class="absolute inset-0 rounded-xl -m-3 transform -rotate-6 bg-indigo-300 transition ease-out duration-150 group-hover:rotate-6 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 rounded-xl -m-3 transform rotate-2 bg-blue-500 bg-opacity-75 shadow-inner transition ease-out duration-150 group-hover:-rotate-3 group-hover:scale-110"></div>
+                    <svg class="hi-outline hi-device-mobile inline-block w-10 h-10 text-white relative transform transition ease-out duration-150 group-hover:scale-125"
+                         stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">
+                    Support
+                </h3>
+                <p class="leading-relaxed text-gray-600 text-justify">
+                    We provide our customer with timer response and greet them with our best possible way.
+                </p>
+            </div>
+            <!--            Custom Development-->
+            <div class=" text-gray-600 min-w-full 	min-h-full rounded row-start-2 col-start-4 col-end-6 text-center py-5">
+                <div class="group inline-flex items-center justify-center w-12 h-12 ml-3 mb-8 relative">
+                    <div class="absolute inset-0 rounded-xl -m-3 transform -rotate-6 bg-indigo-300 transition ease-out duration-150 group-hover:rotate-6 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 rounded-xl -m-3 transform rotate-2 bg-blue-500 bg-opacity-75 shadow-inner transition ease-out duration-150 group-hover:-rotate-3 group-hover:scale-110"></div>
+                    <svg class="hi-outline hi-device-mobile inline-block w-10 h-10 text-white relative transform transition ease-out duration-150 group-hover:scale-125"
+                         stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">
+                    Custom Development
+                </h3>
+                <p class="leading-relaxed text-gray-600 text-justify">
+                    They are designed to work in various screen sizes, from mobile to desktop. Their design will adapt
+                    based on the device you are using, and you can easily preview them beforehand.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Products Section-->
+<section id="products" class="py-10 sm:h-auto lg:min-h-full">
+    <div class="text-center pt-5 pb-10" style="font-family: Poppins-SemiBold">
+        <h1 class="font-bold font-black text-4xl">Our Products</h1>
+    </div>
+    <div class="flex flex-col items-center h-full">
+        <div class="grid grid-cols-12 place-items-center items-center px-36">
+            <div name="product"
+                 class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl"
+                 style=" height: 270px;font-family: Poppins-Regular">
+                <div class="absolute mb-48" style="z-index: -10">
+                    <img src="Assets/Icons/githubIcon.svg" width="50px">
+                </div>
+                <div name="dataShort" class=" w-full rounded-2xl h-2/3">
+                    <div class="flex flex-col p-5 text-black">
+                        <h1 class="text-xl font-semibold text-blue-500">PlanetPress Connect</h1>
+                        <hr class="w-1/3 my-2">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been </p>
+                    </div>
+                </div>
+                <div name="dataLong" class=" w-full rounded-2xl h-full">
+                    <div class="flex flex-col p-5 text-black">
+                        <h1 class="text-xl font-semibold">PlanetPress Connect</h1>
+                        <hr class="w-1/3 my-2">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+                            simply
+                            dummy text of the printing and typesetting industry.</p>
+                        <div class="link5 my-2 font-semibold">
+                            <a href="product.php" class="text-blue-500">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div name="product"
+                 class="md:col-span-6 sm:col-span-6 col-span-12 m-3 text-justify flex flex-col items-center justify-end rounded-2xl h-full"
+                 style="height: 270px;font-family: Poppins-Regular">
+                <div class="absolute mb-48" style="z-index: -10">
+                    <img src="Assets/Icons/githubIcon.svg" width="50px">
+                </div>
+                <div name="dataShort" class=" w-full rounded-2xl h-2/3">
+                    <div class="flex flex-col p-5 text-black">
+                        <h1 class="text-xl font-semibold text-blue-500">PlanetPress Suite</h1>
+                        <hr class="w-1/3 my-2">
+                        <p>The perfect toolset for operation and IT managers.Lets you use data from multiple
+                            systems.Comes with powerful automation capabilities</p>
+                    </div>
+                </div>
+                <div name="dataLong" class=" w-full rounded-2xl h-full">
+                    <div class="flex flex-col p-5 text-black">
+                        <h1 class="text-xl font-semibold">PlanetPress Connect</h1>
+                        <hr class="w-1/3 my-2">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+                            simply
+                            dummy text of the printing and typesetting industry.</p>
+                        <div class="link5 my-2 font-semibold">
+                            <a href="product.php" class="text-blue-500">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="mt-20" style="font-family: Poppins-Regular">
+            <a href="">
+                <button class="bg-blue-500 tracking-wide text-white rounded px-3 py-2 transform transition ease-out duration-500 hover:scale-95  hover:bg-blue-600">
+                    View All Products
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
 <!--Social Icons-->
 <section id="socialIcons">
-    <div class="fuck" style="top: 50%;transform: translateY(-50%) ">
+    <div class="socialIconsDiv" style="top: 50%;transform: translateY(-50%) ">
         <div class='flex flex-col justify-center items-start'>
             <div class='social-btn flex justify-center items-center' id="twitter">
                 <img src="Assets/Icons/twitterIcon.svg">
@@ -183,6 +281,59 @@
         </div>
     </div>
 </section>
+<footer class="px-10 pt-5">
+    <div class="">
+        <div class="grid grid-cols-12">
+            <div class="sm:col-span-12 md:col-span-6 px-10">
+                <h6 class="font-semibold">About</h6>
+                <p class="text-justify">
+                    Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
+                    help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code
+                    or snippets as the code wants to be simple. We will help programmers build up concepts in
+                    different programming languages that include C, C++, Java,
+                    HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
 
+            <div class="sm:col-span-6 md:col-span-3">
+                <h6 class="font-semibold">Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">UI Design</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-6 md:col-span-3">
+                <h6 class="font-semibold">Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contactForm.html">Contact Us</a></li>
+                    <li><a href="#">Request Demo</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-5">
+    </div>
+    <div>
+        <div class="flex justify-around pb-5">
+            <div class="">
+                <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                    <a href="#">NLESSTECH</a>.
+                </p>
+            </div>
+
+            <div class="">
+                <ul class="flex gap-x-4">
+                    <li class=""><a href="#"><img src="Assets/Icons/githubIcon.svg"></a></li>
+                    <li><a href="#"><img src="Assets/Icons/twitterIcon.svg"></a></li>
+                    <li><a href="#"><img src="Assets/Icons/linkedinIcon.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
